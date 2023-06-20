@@ -1,6 +1,6 @@
 import "./Posts.css";
 
-import Post from "../Post";
+import Post from "../post";
 
 const Posts = ({ posts }) => {
     return (

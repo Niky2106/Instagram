@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Post.css";
 
-import { LikeIcon } from "../../icons";
+import { LikeIcon } from "../icons";
 
 const Post = ({ post }) => {
     const { isLike } = post;

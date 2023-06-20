@@ -1,7 +1,7 @@
 import "./TopBar.css";
 
 //incons
-import { CameraIcon, IGTVIcon, LogoIcon, MessangerIcon } from "../../icons";
+import { CameraIcon, IGTVIcon, LogoIcon, MessangerIcon } from "../../components/icons";
 
 const TopBar = () => {
     return (

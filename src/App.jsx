@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+
+import { storiesData } from "./mocks/stories";
+import { userData } from "./mocks/user";
+import { postsData } from "./mocks/posts";
+
+// components
+import TopBar from "./assets/components/TopBar";
+import Stories from "./assets/components/Stories";
+import Posts from "./assets/components/Posts";
+import { CameraIcon } from "./assets/components/icons";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [stories, setStories] = useState(storiesData);
+  const [user, setUser] = useState(userData);
+  const [posts, setPosts] = useState(postsData);
+
+
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        aaaaaaaaaaaa
-      </p>
+      <TopBar />
+      <Stories user={user} stories={stories} />
+      <Posts posts={posts} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
